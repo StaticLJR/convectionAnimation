@@ -40,6 +40,9 @@ def main(resolution_x, resolution_y, seed, output_folder, make_gif, system="wind
         print 50*"="
         print "\n\nWARNING: You have chosen to generate a gif animation. You must have imagemagick installed or this will not work.\n\n"
         print 50*"="
+    
+    if not os.path.isdir(output_folder):
+        os.mkdir(output_folder)
 
     #Imagemagick commands
     if system == "windows":
